@@ -1,0 +1,54 @@
+{
+  "name": "Stack Network - Blog",
+  "description": "This is my default blog API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
+  "image": "https://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
+  "tags": [
+    "application programming interface",
+    "API",
+    "Blog"
+  ],
+  "created": "2014-04-07",
+  "modified": "2014-07-09",
+  "url": "http://stack-network.github.io/blogapi/apis.json",
+  "SpecificationVersion": "0.14",
+  "apis": [
+    {
+      "name": "Blog",
+      "description": "A blog API resource.",
+      "image": "https://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
+      "humanURL": "http://stack-network.github.io/blogapi/",
+      "baseURL": "http://blog.api.kinlane.com",
+      "tags": [
+        "API",
+        "Application Programming Interface",
+        "Blog"
+      ],
+      "properties": [
+        {
+          "type": "Swagger",
+          "url": "http://stack-network.github.io/blogapi/definitions/swagger.json"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "API Evangliest",
+          "email": "info@apievangelist.com",
+          "X-twitter": "apievangelist"
+        }
+      ]
+    }
+  ],
+  "include": [
+    {
+      "name": "Comment APi",
+      "url": "https://github.com/Stack-Network/commentapi/apis.json"
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "API Evangliest",
+      "X-twitter": "apievangelist",
+      "email": "info@apievangelist.com"
+    }
+  ]
+}
