@@ -1,5 +1,5 @@
 {
-  "name": "Stack Network - Note",
+  "name": "Kin Lane - Note",
   "description": "This is my default note API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
   "note": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-notebook.png",
   "tags": [
