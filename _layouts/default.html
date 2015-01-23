@@ -7,7 +7,7 @@
 
     <header class="masthead">
       <div class="masthead-inner" align="center">  	      	
-		<h2>{"Note API"}</h2>      		
+		<h2>{{ site.title }}</h2>      		
     	<a href="http://bit.ly/1cHBhd5" target="_blank">
     		<img src="https://s3.amazonaws.com/kinlane-productions/api-evangelist/3scale/Winning-in-the-API-Economy-eBook-3scale.png" width="50%" style="border: 1px solid #FFF; margin-bottom: 25px;" />
     	</a>                   	      	
@@ -17,7 +17,7 @@
               <a href="index.html" id="home-nav">Home</a>
             </li>
             <li>
-              <a href="editor-note.html" id="note-editor-nav">Note</a>
+              <a href="editor-{{ site.repo }}.html" id="{{ site.repo }}-editor-nav">{{ site.resource }}</a>
             </li>    
             <li>
               <a href="editor-questions.html" id="questions-editor-nav">Questions</a>
@@ -41,7 +41,7 @@
 	    	if($oAuth_Token!='')
 	    		{
 				document.getElementById("home-nav").href = document.getElementById("home-nav").href + '?oAuth_Token=' + $oAuth_Token;
-				document.getElementById("note-editor-nav").href = document.getElementById("note-editor-nav").href + '?oAuth_Token=' + $oAuth_Token;
+				document.getElementById("blog-editor-nav").href = document.getElementById("blog-editor-nav").href + '?oAuth_Token=' + $oAuth_Token;
 				document.getElementById("apis-json-editor-nav").href = document.getElementById("apis-json-editor-nav").href + '?oAuth_Token=' + $oAuth_Token;
 				document.getElementById("questions-editor-nav").href = document.getElementById("questions-editor-nav").href + '?oAuth_Token=' + $oAuth_Token;		
 				document.getElementById("config-editor-nav").href = document.getElementById("config-editor-nav").href + '?oAuth_Token=' + $oAuth_Token;						    					    	
@@ -85,7 +85,7 @@
     	
     	<p align="center">
     		<a href="http://apievangelist.com">
-    			<img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png" align="center" width="60%" style="padding-bottom: 10px;" />
+    			<img src="https://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png" align="center" width="60%" style="padding-bottom: 10px;" />
     		</a>
     	</p>
     	
@@ -103,7 +103,7 @@
 	     <div class="footer">
 		    <ul>
 		    	<li><a href="/">API 101</a></li>
-		    	<li><a href="/note/">Note</a></li>
+		    	<li><a href="/blog/">Blog</a></li>
 		    	<li><a href="/network">Network</a></li>
 		    	<li><a href="http://apicommons.org">API Commons</a></li>
 		    	<li><a href="http://apisjson.org">APIs.json</a></li>
@@ -177,24 +177,32 @@
 	</noscript>	
 	
   	<!-- what do we do with these? -->
-  	<script src="http://stack-network.github.io/blogapi/js/editor-apis-json.js" type="text/javascript"></script>
-  	<script src="http://stack-network.github.io/blogapi/js/editor-swagger-json.js" type="text/javascript"></script>
-  	<script src="/js/editor-note-json.js" type="text/javascript"></script>
-  	<script src="http://stack-network.github.io/blogapi/js/editor-config-json.js" type="text/javascript"></script>             	
+  	<script src="https://kin-lane.github.io/master/js/editor-apis-json.js" type="text/javascript"></script>
+  	<script src="https://kin-lane.github.io/master/js/navigator-apis-json.js" type="text/javascript"></script>
+  	<script src="https://kin-lane.github.io/master/js/editor-swagger-json.js" type="text/javascript"></script>  
+  	<script src="https://kin-lane.github.io/master/js/editor-config-json.js" type="text/javascript"></script>
+  	
+  	<script src="https://kin-lane.github.io/{{ site.repo }}/js/editor-blog-json.js" type="text/javascript"></script>
+  	             	
 	<script type="text/javascript">		
+	
 		if(document.getElementById("jsonEditor"))
 			{
 			loadPropertyTypes();	
 			loadAPIsJSONEditor();
 			}
+		if(document.getElementById("jsonNavigator"))
+			{
+			loadAPIsJSONNavigator('/{{ site.repo }}/apis.json');
+			}			
 		if(document.getElementById("swaggerEditor"))
 			{			
 			$apisjsonURL = 'definitions/swagger.json';	
 			loadSwaggerditor($apisjsonURL);
 			}
-		if(document.getElementById("jsonNoteEditor"))
+		if(document.getElementById("jsonBlogEditor"))
 			{			
-			loadNoteEditor();			
+			loadBlogEditor();			
 			}			
 		if(document.getElementById("jsonConfigEditor"))
 			{			

@@ -1,5 +1,5 @@
-title:        {"API Aggregation"}
-url:          http://aggregation.apievangelist.com
+title:        {"Note API"}
+url:          http://kin-lane.github.io/note/
 version:      1.1.1
 author:
   name:       'Kin Lane'
@@ -14,9 +14,13 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 paginate: 50
 paginate_path: "/news/page:num"
 
-production_url : http://aggregation.apievangelist.com
+production_url : http://kin-lane.github.io/note/
 
-BASE_PATH : http://aggregation.apievangelist.com
+BASE_PATH : http://kin-lane.github.io/note/
 
 categories_path : /categories.html
 tags_path : /tags.html
+
+org: Kin-Lane
+repo: note
+resource: Note

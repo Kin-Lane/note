@@ -22,7 +22,7 @@ if(login=='1')
 	
 	    $oAuth_Token = result.access_token;
 	        
-       	redirectURL = "http://stack-network.github.io/blogapi/editor-apis-json.html?oAuth_Token=" + $oAuth_Token;       
+       	redirectURL = "http://stack-network.github.io/blog/editor-apis-json.html?oAuth_Token=" + $oAuth_Token;       
        	setTimeout(callback(redirectURL), 500);  	        
 		        	         
 		});                   			
@@ -88,7 +88,7 @@ if(login=='1')
 	        auth: "oauth"
 	            });
             
-		var repo = github.getRepo('Stack-Network','blogapi');  
+		var repo = github.getRepo('Stack-Network','blog');  
 
 	    repo.read('gh-pages', 'apis.json', function(err, res) {
 		
