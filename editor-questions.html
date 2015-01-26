@@ -16,13 +16,13 @@ if(login=='1')
 	    }
 	}  
 
-	OAuth.initialize('fCDUUc1DmpCKkzuAhr0LUy4szHg');
+	OAuth.initialize($oauthio);
 	
 	OAuth.popup('github').done(function(result) {
 	
 	    $oAuth_Token = result.access_token;
 	        
-       	redirectURL = "http://stack-network.github.io/blog/editor-apis-json.html?oAuth_Token=" + $oAuth_Token;       
+       	redirectURL = "https://{{ site.org }}.github.io/{{ site.repo }}/editor-apis-json.html?oAuth_Token=" + $oAuth_Token;       
        	setTimeout(callback(redirectURL), 500);  	        
 		        	         
 		});                   			
