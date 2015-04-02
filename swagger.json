@@ -41,8 +41,7 @@
           }
         },
         "tags": [
-          "note",
-          "noteging"
+          "Notes"
         ]
       },
       "post": {
@@ -91,12 +90,11 @@
           }
         },
         "tags": [
-          "note",
-          "noteging"
+          "Notes"
         ]
       }
     },
-    "/note/{slug}": {
+    "/note/{slug}/": {
       "get": {
         "summary": "Retrieve a note using its slug",
         "description": "Returns the note detail",
@@ -122,8 +120,7 @@
           }
         },
         "tags": [
-          "note",
-          "noteging"
+          "Notes"
         ]
       },
       "put": {
@@ -179,8 +176,7 @@
           }
         },
         "tags": [
-          "note",
-          "noteging"
+          "Notes"
         ]
       },
       "delete": {
@@ -208,8 +204,7 @@
           }
         },
         "tags": [
-          "note",
-          "noteging"
+          "Notes"
         ]
       }
     }
