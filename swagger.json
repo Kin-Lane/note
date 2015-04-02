@@ -17,8 +17,8 @@
   "paths": {
     "/notes/": {
       "get": {
-        "summary": "retrieves all notess",
-        "description": "pulls all notess, with filter by keyword",
+        "summary": "retrieves all notes",
+        "description": "pulls all notes, with filter by keyword",
         "operationId": "getNotes",
         "parameters": [
           {
