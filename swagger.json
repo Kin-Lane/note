@@ -6,7 +6,7 @@
     "termsOfService": "http://stack.network/terms-of-service.html",
     "version": "v1"
   },
-  "host": "notes.api.kinlane.com",
+  "host": "note.api.kinlane.com",
   "basePath": "/",
   "schemes": [
     "https"
