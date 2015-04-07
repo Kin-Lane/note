@@ -27,7 +27,11 @@
         {
           "type": "Swagger",
           "url": "https://kin-lane.github.io/note/swagger.json"
-        }
+        },
+        {
+          "type": "x-postman",
+          "url": "https://kin-lane.github.io/note/postman.json"
+        }        
       ],
       "contact": [
         {
