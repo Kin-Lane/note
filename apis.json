@@ -26,7 +26,7 @@
       "properties": [
         {
           "type": "Swagger",
-          "url": "https://kin-lane.github.io/note/definitions/swagger.json"
+          "url": "https://kin-lane.github.io/note/swagger.json"
         }
       ],
       "contact": [
