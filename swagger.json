@@ -17,8 +17,8 @@
   "paths": {
     "/notes/": {
       "get": {
-        "summary": "retrieves all notes",
-        "description": "pulls all notes, with filter by keyword",
+        "summary": "get notes",
+        "description": "get notes",
         "operationId": "getNotes",
         "parameters": [
           {
@@ -59,8 +59,8 @@
         ]
       },
       "post": {
-        "summary": "add notes",
-        "description": "add a new notes",
+        "summary": "add note",
+        "description": "add note",
         "operationId": "addNote",
         "parameters": [
           {
@@ -110,8 +110,8 @@
     },
     "/notes/{notes_id}/": {
       "get": {
-        "summary": "retrieve notes",
-        "description": "Returns the notes detail",
+        "summary": "get note",
+        "description": "get note",
         "operationId": "getNote",
         "parameters": [
           {
@@ -152,8 +152,8 @@
         ]
       },
       "put": {
-        "summary": "update notes",
-        "description": "update notes",
+        "summary": "update note",
+        "description": "update note",
         "operationId": "updateNote",
         "parameters": [
           {
@@ -208,8 +208,8 @@
         ]
       },
       "delete": {
-        "summary": "delete notes",
-        "description": "deletes an notes",
+        "summary": "delete note",
+        "description": "delete note",
         "operationId": "deleteNote",
         "parameters": [
           {
@@ -252,9 +252,9 @@
     },
     "/notes/{notes_id}/tags/": {
       "get": {
-        "summary": "retrieve notes tags",
-        "description": "Returns the tags for an notes",
-        "operationId": "getnotesTags",
+        "summary": "get note tags",
+        "description": "get note tags",
+        "operationId": "getNotesTags",
         "parameters": [
           {
             "name": "notes_id",
@@ -295,9 +295,9 @@
         ]
       },
       "post": {
-        "summary": "add tag to notes",
-        "description": "add tag for notes",
-        "operationId": "addImageTag",
+        "summary": "add note tag",
+        "description": "add note tag",
+        "operationId": "addNoteTags",
         "parameters": [
           {
             "name": "notes_id",
@@ -348,8 +348,8 @@
     "/notes/{notes_id}/tags/{tag}/": {
       "delete": {
         "summary": "delete a notes tag",
-        "description": "deletes a tag applied to notes",
-        "operationId": "deletenotesTag",
+        "description": "delete a notes tag",
+        "operationId": "deleteNotesTag",
         "parameters": [
           {
             "name": "notes_id",
