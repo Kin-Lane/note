@@ -1,6 +1,6 @@
 {
   "name": "Kin Lane - Note",
-  "description": "This is my default note API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
+  "description": "This is my default note API, that I use to keep track of my ideas.",
   "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-notebook.png",
   "tags": [
     "application programming interface",
@@ -27,11 +27,7 @@
         {
           "type": "Swagger",
           "url": "https://kin-lane.github.io/note/swagger.json"
-        },
-        {
-          "type": "x-postman",
-          "url": "https://kin-lane.github.io/note/postman.json"
-        }        
+        }       
       ],
       "contact": [
         {
