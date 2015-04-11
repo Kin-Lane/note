@@ -41,6 +41,34 @@
             "description": "a text query to search across notes",
             "required": false,
             "type": "string"
+          },        
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page results to return",
+            "required": false,
+            "type": "string"
+          },        
+          {
+            "name": "count",
+            "in": "query",
+            "description": "count of results to return",
+            "required": false,
+            "type": "string"
+          },        
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "sort order to return",
+            "required": false,
+            "type": "string"
+          },        
+          {
+            "name": "order",
+            "in": "query",
+            "description": "which field to order by",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -409,7 +437,7 @@
           "description": "title of the notes",
           "type": "string"
         },
-        "notes": {
+        "details": {
           "description": "details of the notes",
           "type": "string"
         },
