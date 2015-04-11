@@ -400,6 +400,11 @@
   "definitions": {
     "note": {
       "properties": {
+        "note_id": {
+          "description": "id for the note",
+          "type": "integer",
+          "format": "id"
+        },      
         "title": {
           "description": "title of the notes",
           "type": "string"
@@ -407,6 +412,11 @@
         "notes": {
           "description": "details of the notes",
           "type": "string"
+        },
+        "post_date": {
+          "description": "date the note was posted",
+          "type": "string",
+          "format": "date"          
         }
       }
     },
