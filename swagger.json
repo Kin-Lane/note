@@ -423,7 +423,167 @@
           "Tags"
         ]
       }
-    }    
+    },
+    "/note/{note_id}/images/": {
+      "get": {
+        "summary": "retrieve note images",
+        "description": "retrieve note images",
+        "operationId": "getOrganizationScreenshots",
+        "parameters": [
+          {
+            "name": "note_id",
+            "in": "path",
+            "description": "id for note",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the note",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the note",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Organization Screenshot Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/image"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Screenshots"
+        ]
+      },
+      "post": {
+        "summary": "add images to note",
+        "description": "add images for note",
+        "operationId": "addOrganizationScreenshot",
+        "parameters": [
+          {
+            "name": "note_id",
+            "in": "path",
+            "description": "id for the note",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the note",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the note",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "path",
+            "in": "formData",
+            "description": "image path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "formData",
+            "description": "image type",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "formData",
+            "description": "image name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Organization Screenshot Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/image"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Screenshots"
+        ]
+      }
+    },
+    "/note/{note_id}/images/{note_image_id}": {
+      "delete": {
+        "summary": "delete a note image",
+        "description": "delete a note image",
+        "operationId": "deleteOrganizationScreenshot",
+        "parameters": [
+          {
+            "name": "note_id",
+            "in": "path",
+            "description": "id for the note",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the note",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the note",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "note_image_id",
+            "in": "path",
+            "description": "id of the image to remove from note",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Organization Tag Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/image"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Screenshots"
+        ]
+      }
+    }      
   },
   "definitions": {
     "note": {
@@ -448,6 +608,32 @@
         }
       }
     },
+    "image": {
+      "properties": {
+        "note_id": {
+          "description": "id for the note",
+          "type": "integer",
+          "format": "id"
+        },
+        "note_image_id": {
+          "description": "id for the image",
+          "type": "integer",
+          "format": "id"
+        },
+        "name": {
+          "description": "name of the image",
+          "type": "string"
+        },
+        "path": {
+          "description": "path of the image",
+          "type": "string"
+        },
+        "type": {
+          "description": "type of image",
+          "type": "string"
+        }
+      }
+    },       
     "tag": {
       "properties": {
         "tag_id": {
