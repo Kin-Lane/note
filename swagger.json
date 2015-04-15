@@ -584,7 +584,7 @@
         ]
       }
     },
-    "/notes/{tag}/": {
+    "/notes/bytag/{tag}/": {
       "get": {
         "summary": "get notes by tag",
         "description": "get notes by tag",
