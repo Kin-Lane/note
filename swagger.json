@@ -34,35 +34,35 @@
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
-          },        
+          },
           {
             "name": "query",
             "in": "query",
             "description": "a text query to search across notes",
             "required": false,
             "type": "string"
-          },        
+          },
           {
             "name": "page",
             "in": "query",
             "description": "page results to return",
             "required": false,
             "type": "string"
-          },        
+          },
           {
             "name": "count",
             "in": "query",
             "description": "count of results to return",
             "required": false,
             "type": "string"
-          },        
+          },
           {
             "name": "sort",
             "in": "query",
             "description": "sort order to return",
             "required": false,
             "type": "string"
-          },        
+          },
           {
             "name": "order",
             "in": "query",
@@ -104,7 +104,7 @@
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
-          },        
+          },
           {
             "name": "title",
             "in": "formData",
@@ -162,7 +162,7 @@
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
-          }          
+          }
         ],
         "responses": {
           "200": {
@@ -204,7 +204,7 @@
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
-          },          
+          },
           {
             "name": "title",
             "in": "formData",
@@ -260,7 +260,7 @@
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
-          }          
+          }
         ],
         "responses": {
           "200": {
@@ -583,7 +583,86 @@
           "Screenshots"
         ]
       }
-    }      
+    },
+    "/notes/{tag}/": {
+      "get": {
+        "summary": "get notes by tag",
+        "description": "get notes by tag",
+        "operationId": "getNoteByTag",
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "path",
+            "description": "tag to filter notes by",
+            "required": true,
+            "type": "string"
+          },        
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "description": "a text query to search across notes",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page results to return",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "count of results to return",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "sort order to return",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "description": "which field to order by",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "notes response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/note"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Notes"
+        ]
+      }
+    }
   },
   "definitions": {
     "note": {
@@ -592,7 +671,7 @@
           "description": "id for the note",
           "type": "integer",
           "format": "id"
-        },      
+        },
         "title": {
           "description": "title of the notes",
           "type": "string"
@@ -604,7 +683,7 @@
         "post_date": {
           "description": "date the note was posted",
           "type": "string",
-          "format": "date"          
+          "format": "date"
         }
       }
     },
@@ -633,7 +712,7 @@
           "type": "string"
         }
       }
-    },       
+    },
     "tag": {
       "properties": {
         "tag_id": {
