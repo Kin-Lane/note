@@ -38,6 +38,9 @@ $app->get($route, function ()  use ($app){
 
 		// manipulation zone
 
+		$host = $_SERVER['HTTP_HOST'];
+		$note_id = prepareIdOut($note_id,$host);
+		
 		$F = array();
 		$F['note_id'] = $note_id;
 		$F['title'] = $title;

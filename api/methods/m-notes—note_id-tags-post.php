@@ -2,6 +2,8 @@
 $route = '/notes/:note_id/tags/';
 $app->post($route, function ($note_id)  use ($app){
 
+	$host = $_SERVER['HTTP_HOST'];
+	$note_id = prepareIdIn($note_id,$host);
 
 	$ReturnObject = array();
 
@@ -39,6 +41,8 @@ $app->post($route, function ($note_id)  use ($app){
 			$query = "INSERT INTO note_tag_pivot(tag_id,note_id) VALUES(" . $tag_id . "," . $note_id . "); ";
 			mysql_query($query) or die('Query failed: ' . mysql_error());
 			}
+
+		$tag_id = prepareIdOut($tag_id,$host);
 
 		$F = array();
 		$F['tag_id'] = $tag_id;

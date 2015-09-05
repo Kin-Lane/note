@@ -2,6 +2,8 @@
 $route = '/notes/:note_id/';
 $app->get($route, function ($note_id)  use ($app){
 
+	$host = $_SERVER['HTTP_HOST'];
+	$note_id = prepareIdIn($note_id,$host);
 
 	$ReturnObject = array();
 
@@ -17,15 +19,6 @@ $app->get($route, function ($note_id)  use ($app){
 		$title = $notes['title'];
 		$details = $notes['details'];
 		$post_date = $notes['post_date'];
-
-		// manipulation zone
-
-		$F = array();
-		$F['note_id'] = $note_id;
-		$F['title'] = $title;
-		$F['details'] = $details;
-		$F['post_date'] = $post_date;
-		$F['tags'] = array();
 
 		$TagQuery = "SELECT t.tag_id, t.tag from tags t";
 		$TagQuery .= " INNER JOIN note_tag_pivot npt ON t.tag_id = npt.tag_id";
@@ -46,6 +39,18 @@ $app->get($route, function ($note_id)  use ($app){
 				$archive = 1;
 				}
 			}
+
+		// manipulation zone
+
+		$host = $_SERVER['HTTP_HOST'];
+		$note_id = prepareIdOut($note_id,$host);
+
+		$F = array();
+		$F['note_id'] = $note_id;
+		$F['title'] = $title;
+		$F['details'] = $details;
+		$F['post_date'] = $post_date;
+		$F['tags'] = array();
 
 		$ReturnObject = $F;
 		}

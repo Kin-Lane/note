@@ -2,6 +2,9 @@
 $route = '/notes/:note_id/images/';
 $app->post($route, function ($note_id)  use ($app){
 
+	$host = $_SERVER['HTTP_HOST'];
+	$note_id = prepareIdIn($note_id,$host);
+
 	$ReturnObject = array();
 
  	$request = $app->request();
@@ -17,6 +20,8 @@ $app->post($route, function ($note_id)  use ($app){
 		//echo $query;
 		mysql_query($query) or die('Query failed: ' . mysql_error());
 		$image_id = mysql_insert_id();
+
+		$image_id = prepareIdOut($image_id,$host);
 
 		$F = array();
 		$F['image_id'] = $image_id;

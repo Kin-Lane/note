@@ -2,6 +2,8 @@
 $route = '/notes/:note_id/tags/';
 $app->get($route, function ($note_id)  use ($app){
 
+	$host = $_SERVER['HTTP_HOST'];
+	$note_id = prepareIdIn($note_id,$host);
 
 	$ReturnObject = array();
 
@@ -18,6 +20,8 @@ $app->get($route, function ($note_id)  use ($app){
 		$tag_id = $Database['tag_id'];
 		$tag = $Database['tag'];
 		$notes_count = $Database['Profile_Count'];
+
+		$tag_id = prepareIdOut($tag_id,$host);
 
 		$F = array();
 		$F['tag_id'] = $tag_id;

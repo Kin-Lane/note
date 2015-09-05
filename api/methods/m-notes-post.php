@@ -36,6 +36,9 @@ $app->post($route, function () use ($app){
 		mysql_query($query) or die('Query failed: ' . mysql_error());
 		$note_id = mysql_insert_id();
 
+    $host = $_SERVER['HTTP_HOST'];
+  	$note_id = prepareIdOut($note_id,$host);
+
 		$ReturnObject = array();
 		$ReturnObject['message'] = "Note Added";
 		$ReturnObject['note_id'] = $note_id;
@@ -62,6 +65,9 @@ $app->post($route, function () use ($app){
 		mysql_query($query) or die('Query failed: ' . mysql_error());
 		$note_id = mysql_insert_id();
 
+    $host = $_SERVER['HTTP_HOST'];
+  	$note_id = prepareIdOut($note_id,$host);
+    
 		$ReturnObject = array();
 		$ReturnObject['message'] = "Note Added";
 		$ReturnObject['note_id'] = $note_id;

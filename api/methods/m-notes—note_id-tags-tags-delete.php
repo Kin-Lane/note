@@ -2,6 +2,9 @@
 $route = '/notes/:note_id/tags/:tag/';
 $app->delete($route, function ($note_id,$tag)  use ($app){
 
+	$host = $_SERVER['HTTP_HOST'];
+	$note_id = prepareIdIn($note_id,$host);
+
 	$ReturnObject = array();
 
  	$request = $app->request();
@@ -23,13 +26,14 @@ $app->delete($route, function ($note_id,$tag)  use ($app){
 			$DeleteResult = mysql_query($DeleteQuery) or die('Query failed: ' . mysql_error());
 			}
 
+		$tag_id = prepareIdOut($tag_id,$host);
+
 		$F = array();
 		$F['tag_id'] = $tag_id;
 		$F['tag'] = $tag;
 		$F['profile_count'] = 0;
 
 		array_push($ReturnObject, $F);
-
 		}
 
 		$app->response()->header("Content-Type", "application/json");

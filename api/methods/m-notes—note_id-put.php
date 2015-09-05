@@ -2,6 +2,9 @@
 $route = '/notes/:note_id/';
 $app->put($route, function ($note_id) use ($app){
 
+  $host = $_SERVER['HTTP_HOST'];
+	$note_id = prepareIdIn($note_id,$host);
+
  	$request = $app->request();
  	$param = $request->params();
 
@@ -30,6 +33,8 @@ $app->put($route, function ($note_id) use ($app){
 		//echo $query . "<br />";
 		mysql_query($query) or die('Query failed: ' . mysql_error());
 
+    $note_id = prepareIdOut($note_id,$host);
+
 		$ReturnObject = array();
 		$ReturnObject['message'] = "Note Updated!";
 		$ReturnObject['note_id'] = $note_id;
@@ -39,6 +44,8 @@ $app->put($route, function ($note_id) use ($app){
 		{
 		$Link = mysql_fetch_assoc($LinkResult);
 
+    $note_id = prepareIdOut($note_id,$host);
+    
 		$ReturnObject = array();
 		$ReturnObject['message'] = "notes Doesn't Exist!";
 		$ReturnObject['note_id'] = $note_id;
