@@ -1,178 +1,460 @@
 {
-	"id": "21496e64-49f6-46b3-a379-fe65d0f84e86",
-	"name": "Notes",
-	"description": "",
-	"order": [
-		"c88e1b73-a8f7-4b0f-87c3-28b935847bf4",
-		"80bc4d43-54ec-4a38-b0c6-ed88de60843d",
-		"e4ef327e-b028-4f90-b7f9-1ce260f0068e",
-		"9e96284f-bc4a-48df-a357-4bf48cebf2d2",
-		"3e5193c2-e30a-45b7-b6e9-b6d64f179c73",
-		"3d9fb883-07d7-4279-8015-3dff9a572d34",
-		"7694636b-9596-472f-9e72-a9fc42ca5513",
-		"5609f587-56a3-4df4-8a07-3a96815ef3d9"
+	"id": "b79a444c-532b-9144-1a19-34b52af43b58",
+	"name": "Note",
+	"description": "This is where I put all of my notes, my thoughts, and what I write about.",
+	"order": [],
+	"folders": [
+		{
+			"id": "579dced4-ef32-ac62-1fea-e1f937c512d1",
+			"name": "notes",
+			"description": "Folder for notes",
+			"order": [
+				"9ba1f581-ee3e-962e-5d4f-db43a2750898",
+				"6e02d339-76c1-070a-e2f8-587fff037da2",
+				"8dc4a4c8-a4f0-ac75-45a6-80c68c3d13a3",
+				"289ff3b9-5aaa-b419-51af-24bed41d1c91",
+				"26a9da7a-470e-981f-eade-c93d66d31807",
+				"594c2d44-23c9-62d2-ec14-03c74a75fd50",
+				"ccdb2dca-2128-3bc9-af7d-a628857710d8",
+				"7188fd12-c8f7-29c1-ee38-b78c67b1268d",
+				"074530ad-3a56-a258-e1dc-61316731d7cb"
+			],
+			"collection_name": "Note",
+			"collection_id": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"collection": "b3022493-2a0c-4c27-809e-03719c23416c",
+			"owner": "27278",
+			"write": true,
+			"collection_owner": "27278"
+		},
+		{
+			"id": "4b26b381-7c1a-a08e-f328-975b2dffa736",
+			"name": "note",
+			"description": "Folder for note",
+			"order": [
+				"3b1d5f11-8f91-7075-77c5-7396cf67680e",
+				"c31320ca-8877-3627-144d-d5fcdfddd9d4",
+				"ceae9eb1-ceea-1034-6745-421be603b979"
+			],
+			"collection_name": "Note",
+			"collection_id": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"collection": "b3022493-2a0c-4c27-809e-03719c23416c",
+			"owner": "27278",
+			"write": true,
+			"collection_owner": "27278"
+		}
 	],
-	"folders": [],
-	"timestamp": 1428388092360,
-	"synced": false,
+	"timestamp": 1413302258635,
 	"owner": "27278",
-	"sharedWithTeam": false,
-	"subscribed": false,
 	"remoteLink": "",
 	"public": false,
-	"write": true,
 	"requests": [
 		{
-			"collectionId": "21496e64-49f6-46b3-a379-fe65d0f84e86",
-			"dataMode": "params",
-			"descriptionFormat": "html",
-			"description": "get note tags\n\nParameters:\n\nnotes_id: id for notes \n\n",
-			"data": [],
+			"id": "074530ad-3a56-a258-e1dc-61316731d7cb",
 			"headers": "",
-			"id": "3d9fb883-07d7-4279-8015-3dff9a572d34",
-			"method": "get",
-			"name": "getNotesTags",
-			"preRequestScript": "",
+			"url": "https://note.api.kinlane.com//notes/bytag/{{tag}}/?appid={{appid}}&appkey={{appkey}}&query={{query}}&page={{page}}&count={{count}}&sort={{sort}}&order={{order}}&",
 			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "get notes by tag",
+			"descriptionFormat": "html",
+			"time": 1441428269177,
+			"version": 2,
 			"responses": [],
-			"synced": false,
 			"tests": "",
-			"time": 1428388092363,
-			"url": "notes.api.kinlane.com/notes/:notes_id/?appid=&appkey=",
-			"owner": "27278"
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "get notes by tag",
+			"folder": "579dced4-ef32-ac62-1fea-e1f937c512d1"
 		},
 		{
-			"collectionId": "21496e64-49f6-46b3-a379-fe65d0f84e86",
-			"dataMode": "params",
-			"descriptionFormat": "html",
-			"description": "update note\n\nParameters:\n\nnotes_id: unique notes_id for the notes \n\n",
-			"data": [],
+			"id": "26a9da7a-470e-981f-eade-c93d66d31807",
 			"headers": "",
-			"id": "3e5193c2-e30a-45b7-b6e9-b6d64f179c73",
-			"method": "put",
-			"name": "updateNote",
-			"preRequestScript": "",
+			"url": "https://note.api.kinlane.com//notes/{{notes_id}}/?appid={{appid}}&appkey={{appkey}}&",
 			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "delete note",
+			"descriptionFormat": "html",
+			"time": 1441428269176,
+			"version": 2,
 			"responses": [],
-			"synced": false,
 			"tests": "",
-			"time": 1428388092363,
-			"url": "notes.api.kinlane.com/notes/:notes_id/",
-			"owner": "27278"
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "delete note",
+			"folder": "579dced4-ef32-ac62-1fea-e1f937c512d1"
 		},
 		{
-			"collectionId": "21496e64-49f6-46b3-a379-fe65d0f84e86",
-			"dataMode": "params",
-			"descriptionFormat": "html",
-			"description": "delete a notes tag\n\nParameters:\n\nnotes_id: id for the notes \n\ntag: tag to remove from notes \n\n",
-			"data": [],
+			"id": "289ff3b9-5aaa-b419-51af-24bed41d1c91",
 			"headers": "",
-			"id": "5609f587-56a3-4df4-8a07-3a96815ef3d9",
-			"method": "delete",
-			"name": "deleteNotesTag",
-			"preRequestScript": "",
+			"url": "https://note.api.kinlane.com//notes/{{notes_id}}/",
 			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "PUT",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "{{title}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "notes",
+					"value": "{{notes}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "update note",
+			"descriptionFormat": "html",
+			"time": 1441428269176,
+			"version": 2,
 			"responses": [],
-			"synced": false,
 			"tests": "",
-			"time": 1428388092363,
-			"url": "notes.api.kinlane.com/notes/:notes_id/tags/?appid=&appkey=",
-			"owner": "27278"
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "update note",
+			"folder": "579dced4-ef32-ac62-1fea-e1f937c512d1"
 		},
 		{
-			"collectionId": "21496e64-49f6-46b3-a379-fe65d0f84e86",
-			"dataMode": "params",
-			"descriptionFormat": "html",
-			"description": "add note tag\n\nParameters:\n\nnotes_id: id for the notes \n\n",
-			"data": [],
+			"id": "3b1d5f11-8f91-7075-77c5-7396cf67680e",
 			"headers": "",
-			"id": "7694636b-9596-472f-9e72-a9fc42ca5513",
-			"method": "post",
-			"name": "addNoteTags",
-			"preRequestScript": "",
+			"url": "https://note.api.kinlane.com//note/{{note_id}}/images/?appid={{appid}}&appkey={{appkey}}&",
 			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "retrieve note images",
+			"descriptionFormat": "html",
+			"time": 1441428269176,
+			"version": 2,
 			"responses": [],
-			"synced": false,
 			"tests": "",
-			"time": 1428388092363,
-			"url": "notes.api.kinlane.com/notes/:notes_id/tags/",
-			"owner": "27278"
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "retrieve note images",
+			"folder": "4b26b381-7c1a-a08e-f328-975b2dffa736"
 		},
 		{
-			"collectionId": "21496e64-49f6-46b3-a379-fe65d0f84e86",
+			"id": "594c2d44-23c9-62d2-ec14-03c74a75fd50",
+			"headers": "",
+			"url": "https://note.api.kinlane.com//notes/{{notes_id}}/tags/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
 			"dataMode": "params",
+			"description": "get note tags",
 			"descriptionFormat": "html",
+			"time": 1441428269176,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "get note tags",
+			"folder": "579dced4-ef32-ac62-1fea-e1f937c512d1"
+		},
+		{
+			"id": "6e02d339-76c1-070a-e2f8-587fff037da2",
+			"headers": "",
+			"url": "https://note.api.kinlane.com//notes/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "{{title}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "notes",
+					"value": "{{notes}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
 			"description": "add note",
-			"data": [],
-			"headers": "",
-			"id": "80bc4d43-54ec-4a38-b0c6-ed88de60843d",
-			"method": "post",
-			"name": "addNote",
-			"preRequestScript": "",
-			"pathVariables": {},
+			"descriptionFormat": "html",
+			"time": 1441428269176,
+			"version": 2,
 			"responses": [],
-			"synced": false,
 			"tests": "",
-			"time": 1428388092363,
-			"url": "notes.api.kinlane.com/notes/",
-			"owner": "27278"
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "add note",
+			"folder": "579dced4-ef32-ac62-1fea-e1f937c512d1"
 		},
 		{
-			"collectionId": "21496e64-49f6-46b3-a379-fe65d0f84e86",
-			"dataMode": "params",
-			"descriptionFormat": "html",
-			"description": "get note\n\nParameters:\n\nnotes_id: id for the notes \n\n",
-			"data": [],
+			"id": "7188fd12-c8f7-29c1-ee38-b78c67b1268d",
 			"headers": "",
-			"id": "9e96284f-bc4a-48df-a357-4bf48cebf2d2",
-			"method": "get",
-			"name": "getNote",
-			"preRequestScript": "",
+			"url": "https://note.api.kinlane.com//notes/{{notes_id}}/tags/{tag}/?appid={{appid}}&appkey={{appkey}}&",
 			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "delete a notes tag",
+			"descriptionFormat": "html",
+			"time": 1441428269176,
+			"version": 2,
 			"responses": [],
-			"synced": false,
 			"tests": "",
-			"time": 1428388092363,
-			"url": "notes.api.kinlane.com/notes/:notes_id/?appid=&appkey=",
-			"owner": "27278"
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "delete a notes tag",
+			"folder": "579dced4-ef32-ac62-1fea-e1f937c512d1"
 		},
 		{
-			"collectionId": "21496e64-49f6-46b3-a379-fe65d0f84e86",
+			"id": "8dc4a4c8-a4f0-ac75-45a6-80c68c3d13a3",
+			"headers": "",
+			"url": "https://note.api.kinlane.com//notes/{{notes_id}}/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
 			"dataMode": "params",
+			"description": "get note",
 			"descriptionFormat": "html",
+			"time": 1441428269176,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "get note",
+			"folder": "579dced4-ef32-ac62-1fea-e1f937c512d1"
+		},
+		{
+			"id": "9ba1f581-ee3e-962e-5d4f-db43a2750898",
+			"headers": "",
+			"url": "https://note.api.kinlane.com//notes/?appid={{appid}}&appkey={{appkey}}&query={{query}}&page={{page}}&count={{count}}&sort={{sort}}&order={{order}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
 			"description": "get notes",
-			"data": [],
-			"headers": "",
-			"id": "c88e1b73-a8f7-4b0f-87c3-28b935847bf4",
-			"method": "get",
-			"name": "getNotes",
-			"preRequestScript": "",
-			"pathVariables": {},
+			"descriptionFormat": "html",
+			"time": 1441428269161,
+			"version": 2,
 			"responses": [],
-			"synced": false,
 			"tests": "",
-			"time": 1428388092362,
-			"url": "notes.api.kinlane.com/notes/?appid=&appkey=&query=",
-			"owner": "27278"
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "get notes",
+			"folder": "579dced4-ef32-ac62-1fea-e1f937c512d1"
 		},
 		{
-			"collectionId": "21496e64-49f6-46b3-a379-fe65d0f84e86",
-			"dataMode": "params",
-			"descriptionFormat": "html",
-			"description": "delete note\n\nParameters:\n\nnotes_id: unique id for the notes \n\n",
-			"data": [],
+			"id": "c31320ca-8877-3627-144d-d5fcdfddd9d4",
 			"headers": "",
-			"id": "e4ef327e-b028-4f90-b7f9-1ce260f0068e",
-			"method": "delete",
-			"name": "deleteNote",
-			"preRequestScript": "",
+			"url": "https://note.api.kinlane.com//note/{{note_id}}/images/",
 			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "path",
+					"value": "{{path}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type",
+					"value": "{{type}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "{{name}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add images for note",
+			"descriptionFormat": "html",
+			"time": 1441428269176,
+			"version": 2,
 			"responses": [],
-			"synced": false,
 			"tests": "",
-			"time": 1428388092363,
-			"url": "notes.api.kinlane.com/notes/?appid=&appkey=",
-			"owner": "27278"
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "add images to note",
+			"folder": "4b26b381-7c1a-a08e-f328-975b2dffa736"
+		},
+		{
+			"id": "ccdb2dca-2128-3bc9-af7d-a628857710d8",
+			"headers": "",
+			"url": "https://note.api.kinlane.com//notes/{{notes_id}}/tags/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "tag",
+					"value": "{{tag}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add note tag",
+			"descriptionFormat": "html",
+			"time": 1441428269176,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "add note tag",
+			"folder": "579dced4-ef32-ac62-1fea-e1f937c512d1"
+		},
+		{
+			"id": "ceae9eb1-ceea-1034-6745-421be603b979",
+			"headers": "",
+			"url": "https://note.api.kinlane.com//note/{{note_id}}/images/{note_image_id}?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "delete a note image",
+			"descriptionFormat": "html",
+			"time": 1441428269176,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "b79a444c-532b-9144-1a19-34b52af43b58",
+			"name": "delete a note image",
+			"folder": "4b26b381-7c1a-a08e-f328-975b2dffa736"
 		}
 	]
 }
