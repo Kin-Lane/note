@@ -1,4 +1,4 @@
-[{
+{
 	"name": "Kin Lane Note API",
 	"description": "All of my ideas that pop into my ahead as I'm monitoring the space end up here. Anything that becomes a blog post will start as a POST to this notes API. My goal is to capture ALL of my thoughts, and then sort through to find what is the best. It works much like curation for the news, but this time its the stream of noise coming from my brain.",
 	"image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-notebook.png",
@@ -6,7 +6,7 @@
 	"tags": ["Kin Lane Note API"],
 	"created": "2016-04-04",
 	"modified": "2016-04-04",
-	"url": "https://kin-lane.github.io/note/"
+	"url": "https://kin-lane.github.io/note/",
 	"specificationVersion": "0.14",
 	"apis": [{
 		"name": "Kin Lane Note API",
@@ -117,4 +117,4 @@
 		"x-twitter": "apievangelist",
 		"email": "info@apievangelist.com"
 	}]
-}]
+}
